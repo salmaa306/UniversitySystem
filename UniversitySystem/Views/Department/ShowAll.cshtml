@@ -1,0 +1,28 @@
+﻿@model List<UniversitySystem.Models.Department>
+
+<h2>All Departments</h2>
+
+<a href="/Department/Add">Add Department</a>
+
+<table border="1">
+
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Details</th>
+	</tr>
+
+	@foreach (var d in Model)
+	{
+		<tr>
+			<td>@d.Id</td>
+			<td>@d.Name</td>
+
+			<td>
+				<a href="/Department/ShowDetails?id=@d.Id">Details</a>
+			</td>
+
+		</tr>
+	}
+
+</table>
